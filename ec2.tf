@@ -1,9 +1,7 @@
 #Create EC2 Instance - Splunk
 resource "aws_instance" "splunk-instance" {
-  ami               = "ami-00c39f71452c08778"
-  instance_type     = "c4.4xlarge"
-  availability_zone = "us-east-1a"
-  key_name          = "main-key"
+  ami           = "ami-0dc9af62644331dc0"
+  instance_type = "c4.4xlarge"
 
   ebs_block_device {
     device_name = "/dev/sda1"
@@ -25,12 +23,12 @@ resource "aws_instance" "splunk-instance" {
                 EOF
 
   tags = {
-    Name = "Splunk Instance"
+    Name = "Kevin_Mathew_splunkInstance"
   }
 }
 
 #Create EC2 Instance - web
-resource "aws_instance" "web" {
+/*resource "aws_instance" "web" {
   ami               = "ami-0a695f0d95cefc163"
   instance_type     = "t2.micro"
   availability_zone = "us-east-1a"
@@ -53,4 +51,4 @@ resource "aws_instance" "web" {
     Name = "Web Server"
   }
 }
-
+*/
